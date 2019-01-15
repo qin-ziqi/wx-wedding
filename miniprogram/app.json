@@ -1,0 +1,54 @@
+{
+	"pages": [
+		"pages/index/index",
+		"pages/map/map",
+		"pages/photo/photo",
+		"pages/message/message",
+		"pages/bless/bless"
+	],
+	"window": {
+		"backgroundColor": "#F6F6F6",
+		"backgroundTextStyle": "dark",
+		"navigationBarBackgroundColor": "#F6F6F6",
+		"navigationBarTitleText": "云开发",
+		"navigationBarTextStyle": "black"
+	},
+	"tabBar": {
+		"color": "#6e6e6e",
+		"selectedColor": "#d4237a",
+		"borderStyle": "white",
+		"backgroundColor": "#ffffff",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"iconPath": "asset/images/invite-dark.png",
+				"selectedIconPath": "asset/images/invite.png",
+				"text": "邀请"
+			},
+			{
+				"pagePath": "pages/photo/photo",
+				"iconPath": "asset/images/photo-dark.png",
+				"selectedIconPath": "asset/images/photo.png",
+				"text": "相册"
+			},
+			{
+				"pagePath": "pages/map/map",
+				"iconPath": "asset/images/map-dark.png",
+				"selectedIconPath": "asset/images/map.png",
+				"text": "导航"
+			},
+			{
+				"pagePath": "pages/bless/bless",
+				"iconPath": "asset/images/bless-dark.png",
+				"selectedIconPath": "asset/images/bless.png",
+				"text": "祝福"
+			},
+			{
+				"pagePath": "pages/message/message",
+				"iconPath": "asset/images/message-dark.png",
+				"selectedIconPath": "asset/images/message.png",
+				"text": "留言"
+			}
+		]
+	}
+}
