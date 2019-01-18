@@ -1,2 +1,3 @@
 <!--miniprogram/pages/photo/photo.wxml-->
 <text>相册</text>
+<bgm></bgm>

@@ -1,0 +1,27 @@
+.bgm-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 20rpx;
+    top: 20rpx;
+}
+
+.bgm-content image {
+    width: 60rpx;
+    height: 60rpx;
+}
+
+.run {
+    animation: run 2s linear infinite;
+}
+
+@keyframes run {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+}
