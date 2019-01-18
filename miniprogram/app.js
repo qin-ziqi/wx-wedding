@@ -68,7 +68,7 @@ App({
 
         promise.then(url => {
             const backgroundAudioManager = wx.getBackgroundAudioManager()
-			backgroundAudioManager.src = url
+			// backgroundAudioManager.src = url
             backgroundAudioManager.title = 'shape of you'
         }).catch(msg => {
             _.errorHandler('背景音乐获取失败')

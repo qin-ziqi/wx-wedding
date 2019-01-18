@@ -1,5 +1,6 @@
 {
 	"usingComponents": {
-		"bgm": "/components/bgm/bgm"
+		"eric-bgm": "/components/bgm/bgm",
+		"eric-swiper": "/components/swiper/swiper"
 	}
 }

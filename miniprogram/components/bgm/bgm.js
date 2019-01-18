@@ -10,7 +10,6 @@ Component({
      * 组件的初始数据
      */
     data: {
-		isShow: true,
         isPlay: true
     },
 
@@ -29,7 +28,6 @@ Component({
             const that = this;
             wx.getBackgroundAudioPlayerState({
                 success(res) {
-					console.log('success')
                     const status = res.status;
                     if (status === 0 || status === 2) {
                         that.setData({
@@ -41,13 +39,7 @@ Component({
                             isPlay: true
                         })
                     }
-                },
-				fail(msg){
-					console.log('fail')
-					that.setData({
-						isShow: false
-					})
-				}
+                }
             })
         }
     },
