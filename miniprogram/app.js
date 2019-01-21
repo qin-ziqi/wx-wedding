@@ -55,7 +55,7 @@ App({
     getBgmUrl() {
         const promise = new Promise((resolve, reject) => {
             wx.cloud.getTempFileURL({
-                fileList: ['6465-dev-38f534/audio/bgm.mp3'],
+                fileList: ['/audio/bgm.mp3'],
                 success: res => {
                     const bgmUrl = res.fileList[0].tempFileURL
                     resolve(bgmUrl)
@@ -68,7 +68,7 @@ App({
 
         promise.then(url => {
             const backgroundAudioManager = wx.getBackgroundAudioManager()
-			// backgroundAudioManager.src = url
+            // backgroundAudioManager.src = url
             backgroundAudioManager.title = 'shape of you'
         }).catch(msg => {
             _.errorHandler('背景音乐获取失败')

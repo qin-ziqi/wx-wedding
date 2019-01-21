@@ -1,2 +1,2 @@
 <eric-bgm></eric-bgm>
-<eric-swiper vertical="true"></eric-swiper>
+<eric-swiper imgs="{{imgs}}" vertical="{{isVertical}}"></eric-swiper>
