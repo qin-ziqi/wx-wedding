@@ -5,14 +5,16 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
-
+		isVertical: false,
+		isIndicatorDots: true,
+		imgs: []
 	},
 
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
-
+		this.getPhotoUrlList()
 	},
 
 	/**
@@ -62,5 +64,26 @@ Page({
 	 */
 	onShareAppMessage: function () {
 
+	},
+
+	/**
+     * 获取照片列表
+     */
+	getPhotoUrlList() {
+		const promise = new Promise(resolve => {
+			wx.cloud.getTempFileURL({
+				fileList: ['/photo/photo-1.jpg', '/photo/photo-2.jpg', '/photo/photo-3.jpg', '/photo/photo-4.jpg', '/photo/photo-5.jpg'],
+				success: res => {
+					const urlList = res.fileList
+					resolve(urlList)
+				}
+			})
+		})
+
+		promise.then(list => {
+			this.setData({
+				imgs: list
+			})
+		})
 	}
 })

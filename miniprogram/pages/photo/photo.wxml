@@ -1,2 +1,4 @@
-<eric-bgm></eric-bgm>
-<eric-swiper vertical="false"></eric-swiper>
+<view class="container">
+    <eric-bgm></eric-bgm>
+    <eric-swiper imgs="{{imgs}}" vertical="{{isVertical}}" indicatorDots="{{isIndicatorDots}}"></eric-swiper>
+</view>

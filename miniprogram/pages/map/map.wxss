@@ -1,1 +1,18 @@
-/* miniprogram/pages/map/map.wxss */
+.content{
+	display: flex;
+	/* justify-content: center; */
+	align-items: center;
+}
+
+.map{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 600rpx;
+	height: 400rpx;
+}
+
+map{
+	width: 100%;
+	height: 100%;
+}

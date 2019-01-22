@@ -4,7 +4,8 @@ Component({
      */
     properties: {
         imgs: Array,
-        vertical:  Boolean
+        vertical: Boolean,
+		indicatorDots: Boolean
     },
 
     /**
@@ -19,18 +20,15 @@ Component({
      * 组件所在页面的生命周期
      */
     pageLifetimes: {
-        /**
-         * 组件所在的页面被展示时执行
-         */
-        show() {
 
-        }
     },
 
     /**
      * 组件的方法列表
      */
     methods: {
-
+		swiperChange(e){
+			// console.log(e)
+		}
     }
 })

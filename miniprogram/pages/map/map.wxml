@@ -1,2 +1,5 @@
-<!--miniprogram/pages/map/map.wxml-->
-<text>导航</text>
+<view class="container content">
+    <view class="map">
+        <map bindtap="tapMap" markers="{{markers}}"  latitude="{{markers[0].latitude}}"longitude="{{markers[0].longitude}}"></map>
+    </view>
+</view>
