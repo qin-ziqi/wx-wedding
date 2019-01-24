@@ -1,7 +1,7 @@
 <swiper class="swiper-content" autoplay interval="{{interval}}" duration="{{duration}}" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" bindchange="swiperChange">
     <block wx:for="{{imgs}}" wx:key="{{index}}">
         <swiper-item>
-            <image src="{{item.tempFileURL}}" class="slide-image" mode='aspectFill' width="355" height="150" />
+            <image src="{{item.src}}" class="slide-image" mode='aspectFill' width="355" height="150" />
         </swiper-item>
     </block>
 </swiper>

@@ -1,1 +1,49 @@
-/* miniprogram/pages/bless/bless.wxss */
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700rpx;
+    margin-bottom: 25rpx;
+    overflow: hidden;
+}
+
+.bless-image {
+    width: 300rpx;
+    height: 220rpx;
+}
+
+.bless-image image {
+    width: 300rpx;
+    height: 220rpx;
+}
+
+.bless-area {
+    height: 600rpx;
+    border: 1rpx solid #ccc;
+}
+.bless-desc{
+	font-size: 28rpx;
+	color: #666;
+	margin-top: -10rpx;
+}
+
+.bless-to {
+    justify-content: space-around;
+}
+
+.btn {
+    width: 340rpx;
+    outline: none;
+    border: none;
+    color: #fff;
+}
+
+.btn-left {
+    background: linear-gradient(135deg, #fc679b 0%, #e2175f 100%);
+    box-shadow: 0 20rpx 30rpx -6rpx rgba(234, 47, 91, 0.5);
+}
+
+.btn-right {
+    background: linear-gradient(135deg, #abdcff 0%, #0396ff 100%);
+    box-shadow: 0 20rpx 30rpx -6rpx rgba(30, 161, 255, 0.5);
+}

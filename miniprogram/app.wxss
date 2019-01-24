@@ -6,11 +6,8 @@ page {
 	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     box-sizing: border-box;
+	justify-content: center;
+	align-items: center;
 	min-height: 100vh;
-}
-
-.content{
-	padding: 0 20rpx;
 }

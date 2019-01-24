@@ -1,18 +1,62 @@
-.content{
-	display: flex;
-	/* justify-content: center; */
-	align-items: center;
+.container {
+    justify-content: flex-start;
 }
 
-.map{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 600rpx;
-	height: 400rpx;
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700rpx;
+    margin-bottom: 25rpx;
+    overflow: hidden;
 }
 
-map{
-	width: 100%;
-	height: 100%;
+.welcome {
+    height: 250rpx;
+}
+
+.welcome image {
+    width: 100%;
+    height: 100%;
+}
+
+.map {
+    height: 500rpx;
+}
+
+map {
+    width: 100%;
+    height: 100%;
+}
+
+.contact {
+    height: 120rpx;
+}
+
+.contact-item {
+    width: 200rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-item image {
+    width: 80rpx;
+    height: 80rpx;
+    margin-bottom: 10rpx;
+}
+
+.contact-item text {
+    font-size: 24rpx;
+    color: #ff4b4b;
+}
+
+.bottom {
+    flex-direction: column;
+}
+
+.bottom image {
+    width: 100%;
+    height: 50rpx;
 }

@@ -5,29 +5,15 @@ Page({
      */
     data: {
         isVertical: true,
-		isIndicatorDots: false,
+        isIndicatorDots: false,
         imgs: []
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function(options) {
-        this.getPhotoUrlList();
-    },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成 
-     */
-    onReady: function() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow: function() {
-
+    onLoad: function() {
+        this.getImageUrl();
     },
 
     /**
@@ -38,23 +24,18 @@ Page({
     },
 
     /**
-     * 获取照片列表
+     * 获取照片链接
      */
-    getPhotoUrlList() {
-        const promise = new Promise(resolve => {
-            wx.cloud.getTempFileURL({
-                fileList: ['/photo/photo-4.jpg'],
-                success: res => {
-                    const urlList = res.fileList
-                    resolve(urlList)
-                }
-            })
-        })
-
-        promise.then(list => {
-            this.setData({
-                imgs: list
-            })
+    getImageUrl() {
+        const db = wx.cloud.database()
+        const photo = db.collection('photo')
+        photo.get({
+            success: res => {
+                const list = res.data.splice(0, 1)
+                this.setData({
+                    imgs: list
+                })
+            }
         })
     }
 })

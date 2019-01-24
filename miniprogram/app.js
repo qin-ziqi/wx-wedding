@@ -1,4 +1,3 @@
-//app.js
 const _ = require('/utils/util')
 
 App({
@@ -40,7 +39,7 @@ App({
             name: 'login',
             data: {},
             success: res => {
-                console.log('[云函数] [login] user openid: ', res.result.openid)
+                console.log('[云函数] [login] user openid:',res.result.openid)
                 this.globalData.openid = res.result.openid
             },
             fail: err => {
@@ -53,22 +52,11 @@ App({
      * 获取背景音乐
      */
     getBgmUrl() {
-        const promise = new Promise((resolve, reject) => {
-            wx.cloud.getTempFileURL({
-                fileList: ['/audio/bgm.mp3'],
-                success: res => {
-                    const bgmUrl = res.fileList[0].tempFileURL
-                    resolve(bgmUrl)
-                },
-                fail: msg => {
-                    reject(msg)
-                }
-            })
-        })
+        const fileList = ['/audios/bgm.mp3']
 
-        promise.then(url => {
+		_.getCloudUrl(fileList).then(list => {
             const backgroundAudioManager = wx.getBackgroundAudioManager()
-            // backgroundAudioManager.src = url
+            // backgroundAudioManager.src = list[0].tempFileURL
             backgroundAudioManager.title = 'shape of you'
         }).catch(msg => {
             _.errorHandler('背景音乐获取失败')

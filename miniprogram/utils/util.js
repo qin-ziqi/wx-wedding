@@ -59,5 +59,26 @@ module.exports = {
             }
         }
         return type;
+    },
+
+    /**
+     * 获取云存储中的图片链接
+     * @param {Array} fileList 要获取链接的图片名称数组
+     * @return {promise} 
+     */
+    getCloudUrl(fileList) {
+        return new Promise((resolve, reject) => {
+            wx.cloud.getTempFileURL({
+                fileList: fileList,
+                success: res => {
+                    const urlList = res.fileList
+                    resolve(urlList)
+                },
+                fail: msg => {
+                    reject(msg)
+                }
+            })
+        })
     }
+
 }

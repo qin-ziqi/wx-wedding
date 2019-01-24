@@ -1,5 +1,21 @@
-<view class="container content">
-    <view class="map">
-        <map bindtap="tapMap" markers="{{markers}}"  latitude="{{markers[0].latitude}}"longitude="{{markers[0].longitude}}"></map>
+<view class="container">
+    <view class="content welcome">
+        <image mode='widthFix' src="{{welcomeSrc}}"></image>
+    </view>
+    <view class="content map">
+        <map bindtap="tapMap" markers="{{markers}}" latitude="{{markers[0].latitude}}" longitude="{{markers[0].longitude}}"></map>
+    </view>
+    <view class="content contact">
+        <view class="contact-item" bindtap='callMale'>
+            <image src="/asset/images/bridegroom.svg"></image>
+            <text>联系新郎</text>
+        </view>
+        <view class="contact-item" bindtap='callFemale'>
+            <image src="/asset/images/bride.svg"></image>
+            <text>联系新娘</text>
+        </view>
+    </view>
+    <view class="content bottom">
+        <image mode='widthFix' src="/asset/images/green-flower-line.png"></image>
     </view>
 </view>

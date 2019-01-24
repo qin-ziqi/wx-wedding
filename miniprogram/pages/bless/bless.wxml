@@ -1,2 +1,20 @@
-<!--miniprogram/pages/bless/bless.wxml-->
-<text>祝福</text>
+<view class="container">
+    <view class="content bless-image">
+        <image src="cloud://dev-38f534.6465-dev-38f534/images/heart-animation.gif"></image>
+    </view>
+    <view class="content bless-area">
+        <view class="bless-item" wx:for="{{blessList}}" wx:key="{{index}}">
+            <image src="{{item.src}}"></image>
+            <text>{{item.name}}</text>
+        </view>
+    </view>
+    <view class="content bless-desc">已收到 {{blessCount}} 位好友送来的祝福</view>
+    <view class="content bless-to">
+        <view class="btn-area">
+            <button class="btn btn-left" open-type='getUserInfo' bindgetuserinfo="getUserInfo">送上祝福</button>
+        </view>
+        <view class="btn-area">
+            <button class="btn btn-right">分享喜悦</button>
+        </view>
+    </view>
+</view>
