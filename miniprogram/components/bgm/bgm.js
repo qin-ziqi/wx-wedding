@@ -26,6 +26,7 @@ Component({
          */
         show() {
             const that = this;
+            this.getMusicUrl()
             wx.getBackgroundAudioPlayerState({
                 success(res) {
                     const status = res.status;
@@ -48,6 +49,23 @@ Component({
      * 组件的方法列表
      */
     methods: {
+        /**
+         * @desc 获取背景音乐资源
+         */
+        getMusicUrl () {
+            const that = this
+            const db = wx.cloud.database()
+            const music = db.collection('music')
+            music.get().then(res => {
+                console.log(res)
+            //   let musicUrl = res.data[0].musicUrl
+            //   audioCtx.src = musicUrl
+            //   audioCtx.loop = true
+            //   audioCtx.play()
+            //   that.getList()
+            })
+       },
+
         /**
          * 背景音乐状态变化
          */

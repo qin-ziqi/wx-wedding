@@ -8,7 +8,7 @@
 	z-index: 9;
 }
 
-.bgm-content image {
+.bgm-img {
     width: 60rpx;
     height: 60rpx;
 }

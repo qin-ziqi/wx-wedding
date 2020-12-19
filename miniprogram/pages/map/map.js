@@ -7,11 +7,11 @@ Page({
 		welcomeSrc: 'cloud://dev-38f534.6465-dev-38f534/images/welcome.jpg',
         markers: [{
             id: 0,
-            latitude: 36.08092,
-            longitude: 113.82946,
+            latitude: 36.042939,
+            longitude: 113.809944,
             iconPath: '/asset/images/mark.svg',
-            width: 30,
-            height: 30
+            width: 20,
+            height: 20
         }]
     },
 
@@ -37,8 +37,8 @@ Page({
         wx.openLocation({
             latitude: location.latitude,
             longitude: location.longitude,
-            name: '中州国际饭店',
-            address: '安阳市林州市红旗渠大道与太行路交汇处'
+            name: '谷堆庄',
+            address: '河南省安阳市林州市'
         })
     },
 
@@ -56,7 +56,7 @@ Page({
 	 */
 	callFemale() {
 		wx.makePhoneCall({
-			phoneNumber: '13137186780'
+			phoneNumber: '18300609981'
 		})
 	},
 })

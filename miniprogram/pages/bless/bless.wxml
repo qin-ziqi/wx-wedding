@@ -3,7 +3,7 @@
         <image src="cloud://dev-38f534.6465-dev-38f534/images/heart-animation.gif"></image>
     </view>
     <view class="content bless-area">
-        <view class="bless-item" wx:for="{{blessList}}" wx:key="{{index}}">
+        <view class="bless-item" wx:for="{{blessList}}" wx:key="index">
             <image src="{{item.src}}"></image>
             <text>{{item.name}}</text>
         </view>

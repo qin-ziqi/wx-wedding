@@ -28,12 +28,18 @@ Page({
      */
 	getImageUrl() {
 		const db = wx.cloud.database()
-		const photo = db.collection('photo')
+		const photo = db.collection('photos')
+	
 		photo.get({
-			success: res=> {
+			success: res=> {	
+				console.log('success')
+				console.log(res)
 				this.setData({
 					imgs: res.data
 				})
+			},
+			error:err=>{
+				console.log('error')
 			}
 		})
 	}

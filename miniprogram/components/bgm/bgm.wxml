@@ -1,3 +1,3 @@
 <view class="bgm-content" bindtap='bgmChange'>
-    <image class="{{isPlay ? 'run' : ''}}" src="/asset/images/music_icon.png"></image>
+    <image class="{{isPlay ? 'run' : ''}} bgm-img" src="/asset/images/music_icon.png"></image>
 </view>

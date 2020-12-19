@@ -3,7 +3,7 @@
     height: 100vh;
 }
 
-.swiper-content image {
+.slide-image {
     width: 100%;
     height: 100%;
 }
