@@ -52,14 +52,14 @@ App({
      * 获取背景音乐
      */
     getBgmUrl() {
-        const fileList = ['/audios/bgm.mp3']
-
-		_.getCloudUrl(fileList).then(list => {
-            const backgroundAudioManager = wx.getBackgroundAudioManager()
-            // backgroundAudioManager.src = list[0].tempFileURL
-            backgroundAudioManager.title = 'shape of you'
-        }).catch(msg => {
-            _.errorHandler('背景音乐获取失败')
+        const db = wx.cloud.database()
+        const music = db.collection('music')
+        music.get({
+            success: res => {
+                const backgroundAudioManager = wx.getBackgroundAudioManager()
+                backgroundAudioManager.src = res.data[0].src
+                backgroundAudioManager.title = 'shape of you'
+            }
         })
     },
 

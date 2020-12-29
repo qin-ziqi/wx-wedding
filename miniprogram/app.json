@@ -1,12 +1,11 @@
 {
   "pages": [  
-    "pages/bless/bless",
     "pages/index/index",
     "pages/photo/photo",
     "pages/map/map",
-    "pages/message/message"
-
+    "pages/bless/bless"
   ],
+  "requiredBackgroundModes": ["audio", "location"],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "dark",
@@ -43,12 +42,6 @@
         "iconPath": "/asset/images/bless-dark.png",
         "selectedIconPath": "/asset/images/bless.png",
         "text": "祝福"
-      },
-      {
-        "pagePath": "pages/message/message",
-        "iconPath": "asset/images/message-dark.png",
-        "selectedIconPath": "asset/images/message.png",
-        "text": "留言"
       }
     ]
   },

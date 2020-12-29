@@ -31,7 +31,6 @@ Page({
         const photo = db.collection('photos')
         photo.get({
             success: res => {
-                console.log(res)
                 const list = [res.data[2]]
                 this.setData({
                     imgs: list
