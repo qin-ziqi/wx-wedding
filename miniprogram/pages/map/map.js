@@ -56,7 +56,7 @@ Page({
 	 */
 	callFemale() {
 		wx.makePhoneCall({
-			phoneNumber: '18300609981'
+			phoneNumber: '17721025229'
 		})
 	},
 })
